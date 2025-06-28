@@ -30,6 +30,13 @@ body {
   animation: blink 1s step-end infinite;
 }
 
+.blinking-cursor {
+  display: inline-block;
+  width: 1ch; /* Keeps it the size of a single character */
+  border-right: 2px solid white;
+  animation: blink 1s step-end infinite;
+}
+
 @keyframes blink {
   from, to {
     border-color: transparent;
