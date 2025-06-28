@@ -11,7 +11,7 @@ import { FaXTwitter, FaLinkedin, FaGithub, FaWhatsapp, FaPhone } from 'react-ico
 const projects = [
   {
     title: 'Freddies Concepts Website',
-    description: 'My personal developer portfolio built with Next.js, Tailwind CSS, and Framer Motion. Fully responsive and animated.',
+    description: 'A standard website built with Next.js, Tailwind CSS, and Framer Motion. Fully responsive and animated.',
     link: 'https://freddies.vercel.app',
     image: '/freddies.png',
     tech: ['Next.js', 'Tailwind CSS', 'Framer Motion'],
@@ -30,8 +30,14 @@ const projects = [
     image: '/vitexkapital.png',
     tech: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
   },
+ {
+    title: 'Ghods Financial',
+    description: 'A Next.js, Tailwind CSS, and Framer Motion. Fully responsive and animated',
+    link: 'https://ghod-financial.vercel.app/',
+    image: '/financial.png',
+    tech: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
+  },
 ];
-
 export default function Home() {
   return (
     <>
@@ -123,7 +129,7 @@ export default function Home() {
           >
             Featured Projects
           </motion.h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
             {projects.map((project, index) => (
               <ProjectCard
   key={index}
@@ -158,7 +164,7 @@ export default function Home() {
           </motion.h2>
           <p className="text-gray-400 mb-6">Want to work together or ask a question? Reach out below:</p>
           <motion.a
-            href="mailto:freddieconcepts@gmail.com"
+            href="mailto:fredrickokojie@yahoo.com"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="inline-block bg-white text-black font-semibold py-2 px-6 rounded-full transition"
