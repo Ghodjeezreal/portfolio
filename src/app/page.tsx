@@ -64,8 +64,8 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-<h1 className="text-5xl font-bold mb-4">
-  Hi, I&apos;m Fredrick O.<span className="blinking-cursor"></span>
+<h1 className="text-5xl font-bold mb-4 animate-pulse">
+  Hi, I&apos;m Fredrick O.<span className="blinking-cursor">#</span>
 </h1>
           <p className="text-lg text-gray-400 max-w-xl mx-auto mb-6">
             I&apos;m a web developer and creative technologist building modern, responsive websites and apps.
