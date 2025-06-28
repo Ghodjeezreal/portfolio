@@ -59,10 +59,10 @@ export default function Home() {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-5xl font-bold mb-4 animate-pulse">
-            Hi, I'm Freddie 👋
+            Hi, I&apos;m Freddie 👋
           </h1>
           <p className="text-lg text-gray-400 max-w-xl mx-auto mb-6">
-            I’m a web developer and creative technologist building modern, responsive websites and apps.
+            I&apos;m a web developer and creative technologist building modern, responsive websites and apps.
           </p>
           <motion.a
             href="#projects"
@@ -93,7 +93,7 @@ export default function Home() {
             About Me
           </motion.h2>
           <p className="text-gray-400 py-3">
-            I'm passionate about transforming ideas into interactive digital experiences. With a strong foundation in frontend development and a flair for clean, modern UI design, I specialize in building user-friendly websites and dashboards.
+            I&apos;m passionate about transforming ideas into interactive digital experiences. With a strong foundation in frontend development and a flair for clean, modern UI design, I specialize in building user-friendly websites and dashboards.
           </p>
         </motion.section>
         <a
