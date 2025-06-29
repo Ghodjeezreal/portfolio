@@ -1,12 +1,10 @@
-// src/app/page.tsx
-
 'use client';
 
 import { motion } from 'framer-motion';
 import Navbar from './components/Navbar';
 import ProjectCard from './components/ProjectCard';
+import GraphicCarousel from './components/GraphicCarousel'; // <-- Import the carousel
 import { FaXTwitter, FaLinkedin, FaGithub, FaWhatsapp, FaPhone } from 'react-icons/fa6';
-
 
 const projects = [
   {
@@ -17,12 +15,12 @@ const projects = [
     tech: ['Next.js', 'Tailwind CSS', 'Framer Motion'],
   },
   {
-  title: 'Obazz Fc Website',
-  description: 'Freddies Concepts Website built with Next.js, Tailwind CSS, and Framer Motion. Fully responsive and animated.',
-  link: 'https://obazz-fc.vercel.app',
-  image: '/obazzfc.png',
-  tech: ['Next.js', 'Tailwind CSS', 'Framer Motion'],
-},
+    title: 'Obazz Fc Website',
+    description: 'Freddies Concepts Website built with Next.js, Tailwind CSS, and Framer Motion. Fully responsive and animated.',
+    link: 'https://obazz-fc.vercel.app',
+    image: '/obazzfc.png',
+    tech: ['Next.js', 'Tailwind CSS', 'Framer Motion'],
+  },
   {
     title: 'Vitex Kapital',
     description: 'A full banking dashboard and admin portal built with PHP, MySQL, and modern frontend technologies. Includes user login, transfers, transactions, and admin approvals.',
@@ -30,7 +28,7 @@ const projects = [
     image: '/vitexkapital.png',
     tech: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
   },
- {
+  {
     title: 'Ghods Financial',
     description: 'A Next.js, Tailwind CSS, and Framer Motion. Fully responsive and animated',
     link: 'https://ghod-financial.vercel.app/',
@@ -38,21 +36,21 @@ const projects = [
     tech: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
   },
 ];
+
 export default function Home() {
   return (
     <>
-    <video
-  autoPlay
-  loop
-  muted
-  playsInline
-  className="fixed top-0 left-0 w-full h-full object-cover z-[-1]"
->
-  <source src="/bg-video.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
-<div className="fixed inset-0 bg-black/90 z-[-1]" />
-
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="fixed top-0 left-0 w-full h-full object-cover z-[-1]"
+      >
+        <source src="/bg-video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div className="fixed inset-0 bg-black/90 z-[-1]" />
 
       <Navbar />
 
@@ -65,7 +63,7 @@ export default function Home() {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-5xl font-bold mb-4 animate-pulse">
-            Hi, I&apos;m Freddie 👋
+            Hi, I&apos;m Fredrick O.<span className="blinking-cursor">👨🏾‍💻</span>
           </h1>
           <p className="text-lg text-gray-400 max-w-xl mx-auto mb-6">
             I&apos;m a web developer and creative technologist building modern, responsive websites and apps.
@@ -98,18 +96,15 @@ export default function Home() {
           >
             About Me
           </motion.h2>
-          <p className="text-gray-400 py-3">
+          <p className="text-gray-400 py-5">
             I&apos;m passionate about transforming ideas into interactive digital experiences. With a strong foundation in frontend development and a flair for clean, modern UI design, I specialize in building user-friendly websites and dashboards.
           </p>
         </motion.section>
-        <a
-  href="/Freddie-CV.pdf"
-  download
-  className="inline-block bg-white text-black font-semibold py-2 px-6 rounded-full shadow transition hover:scale-105"
->
-  Download My CV
-</a>
-
+        
+        {/* Add the GraphicCarousel here */}
+        <div className="w-full flex justify-center mt-32">
+          <GraphicCarousel />
+        </div>
 
         {/* Projects Section */}
         <motion.section
@@ -132,14 +127,13 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
             {projects.map((project, index) => (
               <ProjectCard
-  key={index}
-  title={project.title}
-  description={project.description}
-  link={project.link}
-  image={project.image}
-  tech={project.tech}
-/>
-
+                key={index}
+                title={project.title}
+                description={project.description}
+                link={project.link}
+                image={project.image}
+                tech={project.tech}
+              />
             ))}
           </div>
         </motion.section>
@@ -172,7 +166,7 @@ export default function Home() {
             Email Me
           </motion.a>
         </motion.section>
-         <footer className="mt-32 text-center text-gray-400">
+        <footer className="mt-32 text-center text-gray-400">
           <a
             href="/Freddie-CV.pdf"
             download
