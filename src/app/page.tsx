@@ -10,7 +10,7 @@ const projects = [
   {
     title: 'Freddies Concepts Website',
     description: 'A standard website built with Next.js, Tailwind CSS, and Framer Motion. Fully responsive and animated.',
-    link: 'https://freddies.vercel.app',
+    link: 'https://freddiesconcepts.com.ng',
     image: '/freddies.png',
     tech: ['Next.js', 'Tailwind CSS', 'Framer Motion'],
   },
